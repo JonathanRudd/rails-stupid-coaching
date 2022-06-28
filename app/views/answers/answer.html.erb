@@ -1,0 +1,15 @@
+<h1>You: <%= params[:answer]%> </h1>
+
+<%
+    if params[:answer] == 'I am going to work'
+      coach_answer = 'Great!'
+    elsif params[:answer].end_with?("?")
+      coach_answer = "Silly question, get dressed and go to work!"
+    else
+      coach_answer = 'I dont care, get dressed and go to work!'
+    end %>
+
+<h1>Coach: <%= coach_answer%> </h1>
+
+
+<a href="/ask">Take me back</a>
